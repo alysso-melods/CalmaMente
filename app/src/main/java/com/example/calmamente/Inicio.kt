@@ -43,7 +43,6 @@ fun CalmamenteInicial(navController: NavController, modifier: Modifier = Modifie
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -51,7 +50,6 @@ fun CalmamenteInicial(navController: NavController, modifier: Modifier = Modifie
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Spacer(modifier = Modifier.height(102.dp))
-
             Image(
                 painter = painterResource(id = R.drawable.logo),
                 contentDescription = "Logo",
@@ -59,9 +57,7 @@ fun CalmamenteInicial(navController: NavController, modifier: Modifier = Modifie
                     .width(356.dp)
                     .height(229.dp)
             )
-
             Spacer(modifier = Modifier.height(292.dp))
-
             OutlinedButton(
                 onClick = { navController.navigate("menu_principal") },
                 shape = RoundedCornerShape(10.dp),
@@ -84,3 +80,4 @@ fun CalmamenteInicial(navController: NavController, modifier: Modifier = Modifie
         }
     }
 }
+

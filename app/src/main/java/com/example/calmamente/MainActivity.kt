@@ -26,12 +26,31 @@ class MainActivity : ComponentActivity() {
 fun AppNavigator() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "home") {
-        composable("home") { CalmamenteInicial(navController = navController) }
-        composable("menu_principal") { Home() }
-        composable("mindfulness_audio") { AudioMindfulness(navController = navController)}
-
+        composable("home") {
+            CalmamenteInicial(navController = navController)
+        }
+        composable("menu_principal") {
+            Home(navController = navController)
+        }
+        composable("mindfulness_audio") {
+            AudioMindfulness(navController = navController)
+        }
+        composable("meditacao_guiada") {
+            MedGuiadaAudio(navController = navController)
+        }
+        composable("meditacao_som") {
+            MeditacaoSom(navController = navController)
+        }
+        composable("yin_yoga") {
+            YinYogaAudios(navController = navController)
+        }
+        composable("hatha_yoga") {
+            HathaYogaAudios(navController = navController)
+        }
     }
 }
+
+
 
 
 
